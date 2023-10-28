@@ -1,7 +1,13 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <!-- Forma 1 -->
+    <router-link to="/">Inicio</router-link>
+
+    <!-- Forma 2 -->
+    <router-link :to="{path: '/nosotros'}">Nosotros</router-link>
+
+    <!-- Forma 3 -->
+    <router-link :to="{name: 'carreras'}">Carreras</router-link>
   </nav>
   <router-view/>
 </template>
@@ -16,15 +22,20 @@
 }
 
 nav {
-  padding: 30px;
+  padding: 20px;
+  background-color: darkred;
 }
 
 nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: white;
+  padding: 12px;
+  text-decoration: none;
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: darkred;
+  background-color: white;
+  border-radius: 20px;
 }
 </style>
